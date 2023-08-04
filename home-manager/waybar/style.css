@@ -1,0 +1,145 @@
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "Mononoki Nerd Font";
+    font-weight: bold;
+    font-size: 16px;
+    min-height: 0px;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0);
+}
+
+tooltip {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #11111b;
+}
+
+#cpu,
+#memory,
+#clock,
+#workspaces,
+#window,
+#network,
+#bluetooth,
+#pulseaudio,
+#battery,
+#tray {
+    color: #45475A;
+    background-color: #b4befe;
+    box-shadow: 0px 6px #AAB3F0; 
+    border-radius: 10px;
+    opacity: 1;
+    padding: 0px;
+    margin-bottom: 15px;
+    margin-left: 8px; 
+    margin-right: 8px; 
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+
+#cpu {
+    background-color: #A6E3A1;
+    box-shadow: 0px 6px #75C96D; 
+    margin-left: 24px;
+}
+
+#memory {
+    background-color: #FAB387;
+    box-shadow: 0px 6px #EBA87F; 
+}
+
+
+#clock {
+    background-color: #F2CDCD;
+    box-shadow: 0px 6px #D97575; 
+    margin-right: 24px;
+}
+
+#battery {
+    background-color: #94E2D5;
+    box-shadow: 0px 6px #6DC9BA; 
+}
+
+@keyframes blink-text {
+    0% {
+        color: rgba(69, 71, 90, 0);
+    }
+    100% {
+        color: rgba(69, 71, 90, 1);
+    }
+}
+
+
+#battery.critical {
+    animation: blink-text 1s steps(2, start) infinite;
+}
+
+
+#battery.full {
+    background-color: #94E2D5;
+    box-shadow: 0px 6px #6DC9BA; 
+}
+
+#battery.normal {
+    background-color: #F9E2AF;
+    box-shadow: 0px 6px #E0C079; 
+}
+
+#network {
+    background-color: #89B4FA;
+    box-shadow: 0px 6px #4784E6; 
+}
+
+#pulseaudio {
+    background-color: #94E2D5;
+    box-shadow: 0px 6px #179299; 
+}
+
+#workspaces button {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#workspaces button.active {
+    color: #45475A;
+    background: #ea76cb;
+    border-radius: 10px 10px 0px 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 6px;
+    margin-right: 0px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button.urgent {
+    color: #ea76cb;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button:hover {
+    color: #45475A;
+    background: #f5c2e7;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces {
+    background-color: #f5c2e7;
+    box-shadow: 0px 6px #ea76cb;
+    border-radius: 10px;
+    padding-left: 12px;
+}
+
+#window {
+    border-radius: 0px 10px 10px 0px;
+    padding-right: 12px;
+}
